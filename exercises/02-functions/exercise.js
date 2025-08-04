@@ -81,8 +81,11 @@ function createCounter() {
  */
 function processNumbers(numbers, callback) {
   // TODO: Create a new array by applying the callback to each number
-  // Hint: Use a loop or array method like map()
-  
+  const result = [];
+  for (let i = 0; i < numbers.length; i++) {
+    result.push(callback(numbers[i]));
+  }
+  return result;
 }
 
 // DO NOT MODIFY: Export functions for testing
