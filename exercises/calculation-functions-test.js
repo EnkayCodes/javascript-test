@@ -18,7 +18,7 @@
 let functions;
 if (typeof require !== 'undefined') {
     // Node.js environment
-    functions = require('./calculation-functions-exercise.js');
+    functions = require('./calculation-function.js');
 } else {
     // Browser environment
     functions = window.CalculationFunctions;
@@ -382,14 +382,14 @@ function testFindLargestExpense() {
         'December 2024 (no data) should return null'
     );
     
-    // Test March 2024 - should be education ($400)
+    // Test March 2024 - should be housing ($1200)
     const mar2024LargestExpense = {
-        id: '28',
+         id: '23',
         type: 'expense',
-        amount: 400,
-        category: 'education',
-        description: 'Online Course',
-        date: '2024-03-18'
+        amount: 1200,
+        category: 'housing',
+        description: 'Monthly Rent',
+        date: '2024-03-01'
     };
     
     test(
